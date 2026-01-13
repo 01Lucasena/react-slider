@@ -2,7 +2,6 @@
 
 Um carrossel de produtos responsivo e interativo desenvolvido com React, que exibe itens de forma infinita com transições suaves.
 
-![Carrossel de Produtos](src/assets/images/tenis.png)
 
 ## 🚀 Funcionalidades
 
