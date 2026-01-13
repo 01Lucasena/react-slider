@@ -1,0 +1,359 @@
+
+
+@font-face {
+    font-family: 'Mouse Memories';
+    src: url('../src/assets/fonts/MouseMemoirs-Regular.ttf') format('truetype');
+}
+
+
+.logo{
+    width: 400px;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+.carousel-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(white, #0f00b9);
+    flex-direction: column;
+    height: 100vh;
+}
+
+.carousel-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-viewport{
+    width: calc(4 * 200px + 3 * 30px);
+    overflow: hidden;
+}
+
+.card-list {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.card-item {
+    width: 200px;
+    height: 300px;
+    gap: 20px;
+    background: #D9D9D9;
+    padding: 10px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-top: 5px solid #0f00b9;
+    justify-content: center;
+    box-sizing: border-box;
+  
+}
+
+.left-button, .right-button {
+    background-color: #c714df;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 40px;
+    margin-top: 100px;
+    
+}
+
+.left-button:hover, .right-button:hover {
+    background-color: #c714df;
+}
+
+.card-img-container{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background: #c714df;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Mouse Memories', sans-serif;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card-price{
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.card-description{
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.buy-button{
+    background-color: #c714df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    justify-content: center;
+    align-self: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.buy-button:hover{
+    background-color: #8c009e;
+}
+
+.footer{
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #D9D9D9;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(#0f00b9, #c714df);
+    height: 100px;
+}
+
+.footer-text{
+    margin-top: 70px;
+}
+
+.card-img{
+    width: auto;
+    height: 100%;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-content h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'Mouse Memories', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.popup-content p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.popup-button {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.popup-button.confirm {
+  background: #c714df;
+  color: white;
+}
+
+.popup-button.cancel {
+  background: #f44336;
+  color: white;
+}
+
+.popup-button.confirm:hover {
+  background: #8c009e;
+}
+
+.popup-button.cancel:hover {
+  background: #d32f2f;
+}
+
+.popup-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    padding: 1.5rem;
+  }
+  
+  .popup-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .popup-button {
+    width: 100%;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .card-viewport {
+        width: calc(3 * 200px + 2 * 30px);
+    }
+}
+
+@media (max-width: 900px) {
+    .card-viewport {
+        width: calc(2 * 200px + 30px);
+    }
+    
+    .logo {
+        width: 300px;
+        margin-bottom: 40px;
+    }
+    
+    .left-button, .right-button {
+        margin: 0 20px;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .card-viewport {
+        width: 180px;
+    }
+    
+    .logo {
+        width: 250px;
+        margin-bottom: 100px;
+    }
+    
+    .card-item {
+        width: 180px;
+        height: 280px;
+        flex-shrink: 0;
+    }
+    
+    .card-img-container {
+        width: 130px;
+        height: 90px;
+        margin-left: 10px;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-price, .card-description {
+        font-size: 13px;
+    }
+    
+    .buy-button {
+        padding: 8px 12px;
+        font-size: 13px;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-viewport {
+        width: 160px;
+    }
+    .logo {
+        width: 180px;
+    }
+    
+    .left-button, .right-button {
+        width: 35px;
+        height: 35px;
+        margin: 0 10px;
+        margin-top: 80px;
+    }
+    
+    .card-item {
+        width: 160px;
+        height: 260px;
+        flex-shrink: 0;
+    }
+    
+    .card-img-container {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-price, .card-description {
+        font-size: 12px;
+    }
+}
