@@ -1,5 +1,8 @@
 # React Infinite Carousel
 
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/4a71592c-4999-42fc-9dbb-a02ff162fe2d" />
+
+
 Um carrossel de produtos responsivo e interativo desenvolvido com React, que exibe itens de forma infinita com transições suaves.
 
 
